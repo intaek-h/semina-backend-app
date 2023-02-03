@@ -1,7 +1,10 @@
 import express from "express";
 import { Board } from "./@core/types/type";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors());
 
 app.get("/", (req, res, next) => {
   res.send("ok");
