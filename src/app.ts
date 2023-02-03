@@ -7,16 +7,12 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/articles", (req, res, next) => {
-  res.send([
-    {
-      id: 141,
-      content: "hahahahah!",
-    },
-    {
-      id: 145,
-      content: "jajajajajja",
-    },
-  ]);
+  const boards: Board[] = [
+    { id: 141, content: "hahahahah!" },
+    { id: 145, content: "jajajajajja" },
+  ];
+
+  res.send(boards);
 });
 
 app.listen(3030, () => {
