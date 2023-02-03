@@ -12,8 +12,18 @@ app.get("/", (req, res, next) => {
 
 app.get("/articles", (req, res, next) => {
   const boards: Board[] = [
-    { id: 141, content: "hahahahah!", created_at: new Date().toString() },
-    { id: 145, content: "jajajajajja", created_at: new Date().toString() },
+    {
+      id: 141,
+      content: "hahahahah!",
+      created_at: new Date().toString(),
+      title: "hahahahaahah",
+    },
+    {
+      id: 145,
+      content: "jajajajajja",
+      created_at: new Date().toString(),
+      title: "hahahahaahah",
+    },
   ];
 
   res.send(boards);
